@@ -39,8 +39,8 @@ spring:
             client-name: Kakao
             client-authentication-method: POST
             authorization-grant-type: authorization_code
-            scope: profile_image, account_email, birthday
-            redirect-uri: http://localhost:8080/oauthloading
+            scope: profile_image, account_email
+            redirect-uri: http://localhost:3000/oauthloading
 
         provider:
           kakao:
