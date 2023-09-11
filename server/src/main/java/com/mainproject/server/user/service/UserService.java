@@ -76,6 +76,12 @@ public class UserService {
             profileImage.setImageUrl(imageUrl);
             profileImage.setUser(user);
             user.setProfileimg(profileImage);
+        }else {
+            // 프로필 사진이 없는 경우 기본 이미지 URL을 설정
+            Image defaultProfileImage = new Image();
+            defaultProfileImage.setImageUrl("https://fitfolio-photo.s3.ap-northeast-2.amazonaws.com/default+image/default.png%22);
+            defaultProfileImage.setUser(user);
+            user.setProfileimg(defaultProfileImage);
         }
 
 
