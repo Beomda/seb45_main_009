@@ -18,6 +18,6 @@ public class AuthLoginDto {
     @Email
     private String email;
 
-    private Image profileimg;
+    private String profileimg;
 
 }
