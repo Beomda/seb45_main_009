@@ -30,17 +30,17 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
+    @Column
     private String password;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String nickname;
 
-    @Column(nullable = false, name = "CREATED_AT")
+    @Column(name = "CREATED_AT")
     private LocalDateTime createdAt = LocalDateTime.now();
 
 
-    @Column(nullable = false, name = "MODIFIED_AT")
+    @Column(name = "MODIFIED_AT")
     private LocalDateTime modifiedAt = LocalDateTime.now();
 
 
