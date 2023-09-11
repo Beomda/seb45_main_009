@@ -82,7 +82,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/oauthloading")
+    @GetMapping("/oauthloading")
     public ResponseEntity oAuth2LoginKakao(@RequestBody @Valid AuthLoginDto requesBody) {
         log.info("### oauth2 login start! ###");
 
