@@ -24,9 +24,9 @@
         @GetMapping("/{userId}")
         public ResponseEntity<UserProfileDto> getUserProfileInfo(@PathVariable("userId") long userId) {
             // userId를 사용하여 사용자 프로필 가져온다.
-            log.info("###############start");
+            
             UserProfileDto userProfileDto = userProfileService.getUserProfileInfo(userId);
-             log.info("###############end");
+            
             return ResponseEntity.ok(userProfileDto);
         }
 
