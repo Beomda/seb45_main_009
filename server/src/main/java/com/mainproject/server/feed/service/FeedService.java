@@ -59,6 +59,11 @@ public class FeedService {
             // 이미지 ID를 이미지 객체에서 다시 설정
             image.setImageId(savedImage.getImageId());
         }
+
+        findCreateUser.hasWroteFeed(); // 피드 카운트 증가
+        
+
+        
         return feedRepository.save(savedFeed);
     }
 
@@ -182,6 +187,7 @@ public class FeedService {
         for (Image image : images) {
             imageService.deleteImage(image.getImageId());
         }
+        currentUser.hasDeletedFeed(); // 피드 카운트 감소
 
         feedRepository.delete(deletedFeed);
     }
