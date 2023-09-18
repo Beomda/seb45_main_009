@@ -36,14 +36,14 @@ public class User {
     @Column
     private String password;
 
-    @Column(unique = true)
+    @Column(nullable = false, unique = true)
     private String nickname;
 
-    @Column(name = "CREATED_AT")
+    @Column(nullable = false, name = "CREATED_AT")
     private LocalDateTime createdAt = LocalDateTime.now();
 
 
-    @Column(name = "MODIFIED_AT")
+    @Column(nullable = false, name = "MODIFIED_AT")
     private LocalDateTime modifiedAt = LocalDateTime.now();
 
 
